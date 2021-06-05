@@ -1,0 +1,28 @@
+import org.apache.thrift.TException;
+import java.util.List;
+import java.util.ArrayList;
+
+public class DHTHandler implements FileStore.Iface {
+	List<NodeID> nodeList = new ArrayList<>();
+  public DHTHandler() {
+  }
+
+  public void writeFile(RFile rFile) throws SystemException, org.apache.thrift.TException{
+  
+  }
+
+  public RFile readFile(java.lang.String filename) throws SystemException, org.apache.thrift.TException {
+	return null;  
+  }
+
+  public void setFingertable(java.util.List<NodeID> node_list) throws org.apache.thrift.TException{
+  		this.nodeList = node_list;
+  }
+
+  public NodeID findSucc(java.lang.String key) throws SystemException, org.apache.thrift.TException{}
+
+  public NodeID findPred(java.lang.String key) throws SystemException, org.apache.thrift.TException{}
+
+  public NodeID getNodeSucc() throws SystemException, org.apache.thrift.TException{}
+}
+
